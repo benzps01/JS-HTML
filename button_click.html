@@ -4,7 +4,7 @@
         <style>
             .wrapper {
                 display: grid;
-                background: skyblue;
+                background: #87ceeb;
                 max-width: 50%;
                 height: 400px;
                 border-radius: 10px;
@@ -18,16 +18,17 @@
         </style>
     </head>
     <body>
-        <div class="wrapper">
+        <div class="wrapper" id="wrapperID">
             This is a wrapper container
         </div>
-        <button type="button" id="refreshBtn">Hello</button>
+        <button type="button" id="refreshBtn" onclick="changeColor()">Hello</button>
         <script>
-            document.getElementById("refreshBtn").onclick;
-
-            changeColor(() => {
-                document.getElementBy
-            });
+            let colors = ['#15a2ed','#87ceeb','#951aba','#f01f42','#53d439','#e88827'];
+            let changeColor = () => {
+                let wrapper = document.getElementById("wrapperID");
+                let colorNumber = Math.floor(Math.random() * colors.length);
+                wrapper.style.backgroundColor = colors[colorNumber];
+            };
         </script>
     </body>
 </html>
